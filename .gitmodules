@@ -10,3 +10,6 @@
 [submodule "bundle/Tagbar"]
 	path = bundle/Tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/wincent/Command-T.git
