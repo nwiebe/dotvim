@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/nwiebe/src/boomerang/features/step_definitions'
-let g:netrw_dirhist_2='/home/nwiebe/tmp'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/nathan/.vim'
+let g:netrw_dirhist_2='/home/nathan'
+let g:netrw_dirhist_3='/home/nathan/src'
+let g:netrw_dirhist_4='/home/nathan/src/rails3-devise-rspec-cucumber'
+let g:netrw_dirhist_5='/home/nathan/src/rails3-devise-rspec-cucumber/app'
+let g:netrw_dirhist_6='/home/nathan/src/rails3-devise-rspec-cucumber/app/controllers'

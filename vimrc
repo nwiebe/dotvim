@@ -1,40 +1,57 @@
-"Needs to come before enabeling auto type
-call pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set showcmd
-set backupdir=~/tmp,/tmp,.
-set directory=~/tmp,/tmp,.
-set number
-set ignorecase
-set smartcase  "case insensative unless an upper case letter is entered in search string
-set incsearch
-set cindent
+" To install vundle
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-"From tagbar
-nmap <F8> :TagbarToggle<CR>
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-"to read output of gem 'guard-ctags-bundler'
-set tags+=gems.tags
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-"makes command-t start up faster on first listing
-set wildignore+=.git,tmp/cache
+Plugin 'tpope/vim-rails'
 
-"set cuc
-"set cul
+Plugin 'wincent/Command-T'
+" cd ~/.vim/bundle/Command-T/ruby/command-t
+" rvm use system
+" ruby ruby/command-t/extconf.rb
+" make
 
-au FileType ruby    setlocal sts=2 sw=2 expandtab
-au FileType haml    setlocal sts=2 sw=2 expandtab
-au FileType html    setlocal sts=2 sw=2 expandtab
-au FileType scss    setlocal sts=2 sw=2 expandtab
-au FileType sass    setlocal sts=2 sw=2 expandtab
-au FileType css     setlocal sts=2 sw=2 expandtab
+Plugin 'scrooloose/nerdtree'
 
-au FileType feature setlocal sts=2 sw=2 expandtab
+Plugin 'majutsushi/tagbar'
 
-" http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
-au FocusLost * silent! wa
+Plugin 'vim-scripts/YankRing.vim'
 
-colorscheme koehler
+Plugin 'surround.vim'
+" cs<old><new>
+
+Plugin 'vim-indent-object'
+"v ii <repeate ii>
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 
 let mapleader = ","
-map <leader>f :NERDTreeToggle<cr>
+set number
+nnoremap <leader>t :CommandT<CR>
+nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+map <F8> :TagbarToggle<CR>
