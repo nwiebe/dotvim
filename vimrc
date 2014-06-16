@@ -39,6 +39,8 @@ Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'elzr/vim-json'
 
+Plugin 'bling/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,7 +58,6 @@ filetype plugin indent on    " required
 
 
 let mapleader = ","
-set number
 syntax enable
 
 "CommandT
@@ -88,3 +89,12 @@ au FileType feature setlocal sts=2 sw=2 expandtab
 au FocusLost * silent! wa
 
 colorscheme koehler
+
+set showcmd
+set backupdir=~/tmp,/tmp/,.
+set directory=~/tmp,/tmp/,.
+set number
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=5
