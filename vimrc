@@ -17,9 +17,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 
 Plugin 'wincent/Command-T'
-" cd ~/.vim/bundle/Command-T/ruby/command-t
+" sudo apt-get install ruby-dev
 " rvm use system
-" ruby ruby/command-t/extconf.rb
+" cd ~/.vim/bundle/Command-T/ruby/command-t
+" ruby extconf.rb
 " make
 
 Plugin 'scrooloose/nerdtree'
@@ -56,10 +57,34 @@ filetype plugin indent on    " required
 
 let mapleader = ","
 set number
-nnoremap <leader>t :CommandT<CR>
-nnoremap <leader>n :NERDTree<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
-map <F8> :TagbarToggle<CR>
-
 syntax enable
 
+"CommandT
+nnoremap <leader>t :CommandT<CR>
+set wildignore+=.git,tmp/cache
+
+"NerdTree
+nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+"Tagbar
+map <F8> :TagbarToggle<CR>
+
+set hlsearch
+
+"read output of gem 'guard-ctags-bundler'
+set tags+='gems.tags
+
+au FileType ruby    setlocal sts=2 sw=2 expandtab
+au FileType haml    setlocal sts=2 sw=2 expandtab
+au FileType html    setlocal sts=2 sw=2 expandtab
+au FileType scss    setlocal sts=2 sw=2 expandtab
+au FileType sass    setlocal sts=2 sw=2 expandtab
+au FileType css     setlocal sts=2 sw=2 expandtab
+
+au FileType feature setlocal sts=2 sw=2 expandtab
+
+" http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
+au FocusLost * silent! wa
+
+colorscheme koehler
