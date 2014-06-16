@@ -33,6 +33,12 @@ Plugin 'surround.vim'
 Plugin 'vim-indent-object'
 "v ii <repeate ii>
 
+Plugin 'Lokaltog/powerline'
+
+Plugin 'kchmck/vim-coffee-script'
+
+Plugin 'elzr/vim-json'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -55,3 +61,6 @@ nnoremap <leader>t :CommandT<CR>
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 map <F8> :TagbarToggle<CR>
+
+syntax enable
+
