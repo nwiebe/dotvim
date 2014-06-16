@@ -14,6 +14,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'wincent/Command-T'
 " cd ~/.vim/bundle/Command-T/ruby/command-t
@@ -32,8 +33,6 @@ Plugin 'surround.vim'
 
 Plugin 'vim-indent-object'
 "v ii <repeate ii>
-
-Plugin 'Lokaltog/powerline'
 
 Plugin 'kchmck/vim-coffee-script'
 
