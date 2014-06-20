@@ -1,6 +1,6 @@
 #ignore all the vundle submodules
 bundle/**
 .netrwhist
-
 *.swp
 .netrwhist
+dbext-wla

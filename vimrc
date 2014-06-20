@@ -41,6 +41,10 @@ Plugin 'elzr/vim-json'
 
 Plugin 'bling/vim-airline'
 
+Plugin 'mileszs/ack.vim'
+
+Plugin 'vim-scripts/dbext.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -62,7 +66,7 @@ syntax enable
 
 "CommandT
 nnoremap <leader>t :CommandT<CR>
-set wildignore+=.git,tmp/cache
+set wildignore+=.git,tmp
 
 "NerdTree
 nnoremap <leader>n :NERDTree<CR>
@@ -70,8 +74,6 @@ nnoremap <leader>f :NERDTreeFind<CR>
 
 "Tagbar
 map <F8> :TagbarToggle<CR>
-
-set hlsearch
 
 "read output of gem 'guard-ctags-bundler'
 set tags+='gems.tags
@@ -82,7 +84,7 @@ au FileType html    setlocal sts=2 sw=2 expandtab
 au FileType scss    setlocal sts=2 sw=2 expandtab
 au FileType sass    setlocal sts=2 sw=2 expandtab
 au FileType css     setlocal sts=2 sw=2 expandtab
-
+au FileType coffee  setlocal sts=2 sw=2 expandtab
 au FileType feature setlocal sts=2 sw=2 expandtab
 
 " http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
@@ -98,3 +100,11 @@ set ignorecase
 set smartcase
 set incsearch
 set scrolloff=5
+set hlsearch
+
+source dbext-wla/connection_profiles
+"contains lines like: 
+"let g:dbext_default_profile_example = 'type=MYSQL:user=xxx:host=yyy:port=3306:dbname=nnn'
+"Then in you .sql file reference it in a comment
+" //dbext:example
+" run sql with <leader>sel
