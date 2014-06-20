@@ -103,8 +103,8 @@ set incsearch
 set scrolloff=5
 set hlsearch
 
-if filereadable($HOME."/.vim_wla_connection_profiles")
-	source ~/.vim_wla_connection_profiles
+if filereadable($HOME."/.vim_dbext_connection_profiles")
+	source ~/.vim_dbext_connection_profiles
 endif
 "contains lines like: 
 "let g:dbext_default_profile_example = 'type=MYSQL:user=xxx:host=yyy:port=3306:dbname=nnn'
