@@ -24,6 +24,7 @@ Plugin 'wincent/Command-T'
 " make
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 Plugin 'majutsushi/tagbar'
 
@@ -102,7 +103,9 @@ set incsearch
 set scrolloff=5
 set hlsearch
 
-source dbext-wla/connection_profiles
+if filereadable($HOME."/.vim_wla_connection_profiles")
+	source ~/.vim_wla_connection_profiles
+endif
 "contains lines like: 
 "let g:dbext_default_profile_example = 'type=MYSQL:user=xxx:host=yyy:port=3306:dbname=nnn'
 "Then in you .sql file reference it in a comment
