@@ -45,6 +45,11 @@ Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'vim-scripts/dbext.vim'
+":DBCompleteTables
+"put cursor on table name, then <leader>sdt
+"s - sql, d - describe, t - table
+"s - sql, e - execute,  l - line
+"insert mode - ctrl-X ctrl-P
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
