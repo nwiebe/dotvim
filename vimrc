@@ -50,6 +50,8 @@ Plugin 'vim-scripts/dbext.vim'
 "s - sql, d - describe, t - table
 "s - sql, e - execute,  l - line
 "insert mode - ctrl-X ctrl-P
+"
+Plugin 'yegappan/mru'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,6 +85,9 @@ map <F8> :TagbarToggle<CR>
 
 "read output of gem 'guard-ctags-bundler'
 set tags+='gems.tags
+
+" Plugin 'yegappan/mru'
+nnoremap <leader>m :MRU<CR>
 
 au FileType ruby    setlocal sts=2 sw=2 expandtab
 au FileType haml    setlocal sts=2 sw=2 expandtab
