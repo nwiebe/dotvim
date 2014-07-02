@@ -53,6 +53,15 @@ Plugin 'vim-scripts/dbext.vim'
 "
 Plugin 'yegappan/mru'
 
+Plugin 'tomtom/tcomment_vim'
+" gcc :: toggle comment current line
+" gc{motion} :: toggle comment {motion}
+" gC{motion} :: comment {motion}
+"
+" visual 
+" gc :: toggle comment
+" gC :: comment
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
