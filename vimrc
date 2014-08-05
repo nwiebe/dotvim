@@ -62,6 +62,10 @@ Plugin 'tomtom/tcomment_vim'
 " gc :: toggle comment
 " gC :: comment
 
+Plugin 'valloric/youcompleteme'
+"cd ~/.vim/bundle/youcompleteme
+"./install.sh --clang-completer
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -93,7 +97,7 @@ nnoremap <leader>f :NERDTreeFind<CR>
 map <F8> :TagbarToggle<CR>
 
 "read output of gem 'guard-ctags-bundler'
-set tags+='gems.tags
+set tags+=gems.tags
 
 " Plugin 'yegappan/mru'
 nnoremap <leader>m :MRU<CR>
@@ -109,6 +113,10 @@ au FileType feature setlocal sts=2 sw=2 expandtab
 
 " http://vim.wikia.com/wiki/Auto_save_files_when_focus_is_lost
 au FocusLost * silent! wa
+
+
+"Plugin 'elzr/vim-json'
+nnoremap <leader>j :%!python -m json.tool<CR>
 
 colorscheme koehler
 
