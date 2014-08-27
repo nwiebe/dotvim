@@ -1,5 +1,5 @@
 #ignore all the vundle submodules
 bundle/**
-.netrwhist
 *.swp
 .netrwhist
+.netrwhist~
